@@ -14,8 +14,12 @@ const Status = () => {
 	}, []);
 
 	return (
-		<div style={{ fontSize: '24px' }}>
-			{status ? <button onClick={logout}>Logout</button> : 'Not Logged In Yet'}
+		<div>
+			{status && (
+				<button className="ui right floated secondary button" onClick={logout}>
+					Logout
+				</button>
+			)}
 		</div>
 	);
 };

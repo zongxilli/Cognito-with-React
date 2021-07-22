@@ -19,18 +19,24 @@ const Signup = () => {
 	return (
 		<div>
 			<div>
-				<h2>Sign Up ↓</h2>
+				<h2>Sign Up</h2>
 			</div>
-			<form onSubmit={onSubmitHandler}>
-				<label htmlFor="email">Email</label>
-				<input value={email} onChange={(e) => setEmail(e.target.value)}></input>
-				<label htmlFor="password">Password</label>
+			<form className="ui action input" onSubmit={onSubmitHandler}>
 				<input
+					placeholder="email"
+					value={email}
+					onChange={(e) => setEmail(e.target.value)}></input>
+
+				<input
+					placeholder="password"
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}></input>
 
-				<button type="submit">Signup</button>
+				<button className="ui primary button" type="submit">
+					Signup
+				</button>
 			</form>
+			<div class="ui divider"></div>
 		</div>
 	);
 };
