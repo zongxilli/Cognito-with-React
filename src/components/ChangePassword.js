@@ -38,8 +38,8 @@ export default () => {
 
 				<button className="ui animated button" type="submit">
 					<div className="visible content">Change Password</div>
-					<div class="hidden content">
-						<i class="right arrow icon"></i>
+					<div className="hidden content">
+						<i className="right arrow icon"></i>
 					</div>
 				</button>
 			</form>

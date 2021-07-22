@@ -36,7 +36,7 @@ const Signup = () => {
 					Signup
 				</button>
 			</form>
-			<div class="ui divider"></div>
+			<div className="ui divider"></div>
 		</div>
 	);
 };
