@@ -4,15 +4,15 @@ import ChangePassword from './ChangePassword';
 import ChangeEmail from './ChangeEmail';
 
 export default () => {
+	// Check if this component need to be disabled
 	const { getSession } = useContext(AccountContext);
-
 	const [loggedIn, setLoggedIn] = useState(false);
-
 	useEffect(() => {
 		getSession().then(() => {
 			setLoggedIn(true);
 		});
 	}, []);
+	// -----------------------------------------------
 
 	return (
 		<div>
