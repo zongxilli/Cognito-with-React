@@ -19,11 +19,16 @@ export default () => {
 			{loggedIn && (
 				<>
 					<h2>Settings</h2>
-					<div>
-						<ChangePassword />
-					</div>
-					<div>
-						<ChangeEmail />
+					<div className="ui placeholder segment">
+						<div className="ui two column very relaxed grid">
+							<div className="column">
+								<ChangePassword />
+							</div>
+							<div className="column">
+								<ChangeEmail />
+							</div>
+						</div>
+						<div className="ui vertical divider">Or</div>
 					</div>
 				</>
 			)}

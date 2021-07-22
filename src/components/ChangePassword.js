@@ -23,17 +23,25 @@ export default () => {
 
 	return (
 		<div>
-			<form onSubmit={onSubmitHandler} >
-				<label>Current password</label>
-				<input value={password} onChange={(e) => setPassword(e.target.value)} />
-
-				<label>New password</label>
+			<form className="ui action input" onSubmit={onSubmitHandler}>
 				<input
+					placeholder="current password"
+					value={password}
+					onChange={(e) => setPassword(e.target.value)}
+				/>
+
+				<input
+					placeholder="new password"
 					value={newPassword}
 					onChange={(e) => setNewPassword(e.target.value)}
 				/>
 
-				<button type="submit">Change Password</button>
+				<button className="ui animated button" tabindex="0" type="submit">
+					<div className="visible content">Change Password</div>
+					<div class="hidden content">
+						<i class="right arrow icon"></i>
+					</div>
+				</button>
 			</form>
 		</div>
 	);
