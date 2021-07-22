@@ -10,11 +10,28 @@ const Account = (props) => {
 			const user = Pool.getCurrentUser();
 
 			if (user) {
-				user.getSession((err, session) => {
+				user.getSession(async (err, session) => {
 					if (err) {
 						reject();
 					} else {
-						resolve(session);
+						const attributes = await new Promise((resolve, reject) => {
+							user.getUserAttributes((err, attributes) => {
+								if (err) {
+									reject(err);
+								} else {
+									const results = {};
+
+									for (let attribute of attributes) {
+										const { Name, Value } = attribute;
+										results[Name] = Value;
+									}
+
+									resolve(results);
+								}
+							});
+						});
+
+						resolve({ user, ...session, ...attributes });
 					}
 				});
 			} else {

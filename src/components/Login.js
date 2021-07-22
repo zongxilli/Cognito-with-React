@@ -22,7 +22,7 @@ const Login = () => {
 	return (
 		<div>
 			<div>
-				<h1>Log In ↓</h1>
+				<h2>Log In ↓</h2>
 			</div>
 			<form onSubmit={onSubmitHandler}>
 				<label htmlFor="email">Email</label>
