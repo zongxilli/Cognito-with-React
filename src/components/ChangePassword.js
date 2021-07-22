@@ -36,7 +36,7 @@ export default () => {
 					onChange={(e) => setNewPassword(e.target.value)}
 				/>
 
-				<button className="ui animated button" tabindex="0" type="submit">
+				<button className="ui animated button" type="submit">
 					<div className="visible content">Change Password</div>
 					<div class="hidden content">
 						<i class="right arrow icon"></i>

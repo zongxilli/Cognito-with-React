@@ -13,6 +13,7 @@ const Login = () => {
 		authenticate(email, password)
 			.then((data) => {
 				console.log('Logged in!', data);
+				window.location.reload(false);
 			})
 			.catch((err) => {
 				console.error('Failed to login', err);
@@ -39,7 +40,7 @@ const Login = () => {
 					Login
 				</button>
 			</form>
-			<div class="ui divider"></div>
+			<div className="ui divider"></div>
 		</div>
 	);
 };
